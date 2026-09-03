@@ -36,3 +36,8 @@ WHERE datname = 'rag_labs' AND pid <> pg_backend_pid();
 
 commit
 
+select * from lab1_3_pc_parents
+select * from lab1_3_pc_children
+
+select * from lab1_5_decomposed_chunks
+
