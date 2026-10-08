@@ -1,0 +1,1658 @@
+{
+  "summary": {
+    "zero-shot": {
+      "n": 50,
+      "hits": 46,
+      "accuracy": 0.92,
+      "ci_low": 0.8116149745493629,
+      "ci_high": 0.9684509967442093,
+      "mean_input_tokens": 121.18,
+      "mean_output_tokens": 85.78,
+      "mean_cost": null,
+      "p95_latency": 1.6235567999538034
+    },
+    "few-shot-3": {
+      "n": 50,
+      "hits": 44,
+      "accuracy": 0.88,
+      "ci_low": 0.7619492111337642,
+      "ci_high": 0.9438247628937535,
+      "mean_input_tokens": 180.18,
+      "mean_output_tokens": 71.5,
+      "mean_cost": null,
+      "p95_latency": 1.209742399980314
+    },
+    "CoT-rationale": {
+      "n": 50,
+      "hits": 43,
+      "accuracy": 0.86,
+      "ci_low": 0.738135428014719,
+      "ci_high": 0.9304925473797714,
+      "mean_input_tokens": 203.18,
+      "mean_output_tokens": 105.24,
+      "mean_cost": null,
+      "p95_latency": 2.136306400061585
+    },
+    "ReAct-2step": {
+      "n": 50,
+      "hits": 45,
+      "accuracy": 0.9,
+      "ci_low": 0.7863950966521162,
+      "ci_high": 0.956524876008429,
+      "mean_input_tokens": 407.4,
+      "mean_output_tokens": 94.24,
+      "mean_cost": null,
+      "p95_latency": 2.025434899958782
+    }
+  },
+  "results": {
+    "zero-shot": [
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 129,
+        "output_tokens": 83,
+        "latency_seconds": 2.6393741999054328,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 124,
+        "output_tokens": 53,
+        "latency_seconds": 0.6428065000800416,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 59,
+        "latency_seconds": 0.6908425000729039,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 122,
+        "output_tokens": 58,
+        "latency_seconds": 0.7780161000555381,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 123,
+        "output_tokens": 71,
+        "latency_seconds": 0.9008802000898868,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 67,
+        "latency_seconds": 0.7664598000701517,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 122,
+        "output_tokens": 66,
+        "latency_seconds": 1.112476299982518,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 122,
+        "output_tokens": 72,
+        "latency_seconds": 0.9070494000334293,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 58,
+        "latency_seconds": 0.7374784999992698,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 57,
+        "latency_seconds": 0.693069800036028,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 121,
+        "output_tokens": 180,
+        "latency_seconds": 1.7841673999791965,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 125,
+        "output_tokens": 46,
+        "latency_seconds": 0.5891183000057936,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 123,
+        "output_tokens": 152,
+        "latency_seconds": 1.3995742000406608,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 69,
+        "latency_seconds": 0.891737800091505,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 118,
+        "output_tokens": 93,
+        "latency_seconds": 1.0406213999958709,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 119,
+        "output_tokens": 54,
+        "latency_seconds": 0.7258417999837548,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 92,
+        "latency_seconds": 1.0480237000156194,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 70,
+        "latency_seconds": 0.7275146000320092,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 179,
+        "latency_seconds": 1.6235567999538034,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 75,
+        "latency_seconds": 0.795692199957557,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 122,
+        "output_tokens": 72,
+        "latency_seconds": 0.8646403999300674,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 117,
+        "output_tokens": 48,
+        "latency_seconds": 0.5877458000322804,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 126,
+        "output_tokens": 81,
+        "latency_seconds": 0.8983781000133604,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 62,
+        "latency_seconds": 0.7297369999578223,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 74,
+        "latency_seconds": 0.936662400024943,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 84,
+        "latency_seconds": 0.8606818999396637,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 122,
+        "output_tokens": 75,
+        "latency_seconds": 0.7844895999878645,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 119,
+        "output_tokens": 52,
+        "latency_seconds": 0.5981669999891892,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 76,
+        "latency_seconds": 0.8198075999971479,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 65,
+        "latency_seconds": 0.789197999984026,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 124,
+        "output_tokens": 73,
+        "latency_seconds": 1.3137875999091193,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 123,
+        "output_tokens": 84,
+        "latency_seconds": 0.9887252000626177,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 124,
+        "output_tokens": 72,
+        "latency_seconds": 0.8185270000249147,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": false,
+        "input_tokens": 122,
+        "output_tokens": 154,
+        "latency_seconds": 1.4661384000210091,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 119,
+        "output_tokens": 59,
+        "latency_seconds": 0.70267930009868,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 124,
+        "output_tokens": 115,
+        "latency_seconds": 1.0964746000245214,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 97,
+        "latency_seconds": 1.0396980000659823,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 81,
+        "latency_seconds": 0.8118243999779224,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 125,
+        "output_tokens": 68,
+        "latency_seconds": 0.8820930001093075,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 121,
+        "output_tokens": 71,
+        "latency_seconds": 0.729904199950397,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 118,
+        "output_tokens": 90,
+        "latency_seconds": 0.8819146000314504,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 118,
+        "output_tokens": 84,
+        "latency_seconds": 0.8141525000100955,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 108,
+        "latency_seconds": 1.4442658999469131,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 118,
+        "output_tokens": 91,
+        "latency_seconds": 0.9847630000440404,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 134,
+        "latency_seconds": 1.281180299934931,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 110,
+        "latency_seconds": 1.021212299936451,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": false,
+        "input_tokens": 120,
+        "output_tokens": 99,
+        "latency_seconds": 0.880197299993597,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 120,
+        "output_tokens": 180,
+        "latency_seconds": 1.600579599966295,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 119,
+        "output_tokens": 79,
+        "latency_seconds": 0.9028935999376699,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 120,
+        "output_tokens": 97,
+        "latency_seconds": 0.9580668000271544,
+        "api_calls": 1
+      }
+    ],
+    "few-shot-3": [
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 188,
+        "output_tokens": 57,
+        "latency_seconds": 0.6642254999605939,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 183,
+        "output_tokens": 54,
+        "latency_seconds": 0.6298763999948278,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 60,
+        "latency_seconds": 0.6722306999145076,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 181,
+        "output_tokens": 63,
+        "latency_seconds": 0.6522594999987632,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 182,
+        "output_tokens": 67,
+        "latency_seconds": 0.6853396999649704,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 55,
+        "latency_seconds": 0.6377809999976307,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 181,
+        "output_tokens": 66,
+        "latency_seconds": 0.7782073999987915,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 181,
+        "output_tokens": 33,
+        "latency_seconds": 0.4887453999835998,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 47,
+        "latency_seconds": 0.5770512000890449,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 51,
+        "latency_seconds": 0.6389166000299156,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 105,
+        "latency_seconds": 1.1197911000344902,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 184,
+        "output_tokens": 48,
+        "latency_seconds": 0.6233316999860108,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": false,
+        "input_tokens": 182,
+        "output_tokens": 149,
+        "latency_seconds": 1.4019575999118388,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 63,
+        "latency_seconds": 0.7893731000367552,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 177,
+        "output_tokens": 91,
+        "latency_seconds": 0.9588952000485733,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 178,
+        "output_tokens": 61,
+        "latency_seconds": 0.7265044000232592,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 56,
+        "latency_seconds": 0.6701194000197574,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": false,
+        "input_tokens": 180,
+        "output_tokens": 85,
+        "latency_seconds": 0.8467418999643996,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 68,
+        "latency_seconds": 0.6958136999746785,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 63,
+        "latency_seconds": 0.6952596999472007,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 181,
+        "output_tokens": 57,
+        "latency_seconds": 0.6720442000078037,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 176,
+        "output_tokens": 49,
+        "latency_seconds": 0.7099458000157028,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 185,
+        "output_tokens": 58,
+        "latency_seconds": 0.7079037999501452,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 60,
+        "latency_seconds": 0.7189447999699041,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 56,
+        "latency_seconds": 0.6558644999749959,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 61,
+        "latency_seconds": 0.6770147999050096,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 181,
+        "output_tokens": 71,
+        "latency_seconds": 0.8415630999952555,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 178,
+        "output_tokens": 60,
+        "latency_seconds": 0.6686456999741495,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 49,
+        "latency_seconds": 0.6810622999910265,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 69,
+        "latency_seconds": 0.867067200015299,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 183,
+        "output_tokens": 58,
+        "latency_seconds": 0.67283579998184,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 182,
+        "output_tokens": 48,
+        "latency_seconds": 0.6543706000084057,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 183,
+        "output_tokens": 58,
+        "latency_seconds": 0.7498520000372082,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": false,
+        "input_tokens": 181,
+        "output_tokens": 120,
+        "latency_seconds": 1.209742399980314,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 178,
+        "output_tokens": 47,
+        "latency_seconds": 0.7329639999661595,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 183,
+        "output_tokens": 100,
+        "latency_seconds": 1.1613101999973878,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 50,
+        "latency_seconds": 0.6342871999368072,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 55,
+        "latency_seconds": 0.6669070000061765,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 184,
+        "output_tokens": 78,
+        "latency_seconds": 0.8504610999953002,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 180,
+        "output_tokens": 79,
+        "latency_seconds": 0.8322410000255331,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 177,
+        "output_tokens": 88,
+        "latency_seconds": 0.8904335999395698,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 177,
+        "output_tokens": 56,
+        "latency_seconds": 0.7187486999901012,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 76,
+        "latency_seconds": 0.8229941999306902,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 177,
+        "output_tokens": 180,
+        "latency_seconds": 1.6337784000206739,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 119,
+        "latency_seconds": 1.177561999997124,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 67,
+        "latency_seconds": 0.800563000026159,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": false,
+        "input_tokens": 179,
+        "output_tokens": 97,
+        "latency_seconds": 0.9600491999881342,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 84,
+        "latency_seconds": 0.9213957000756636,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 178,
+        "output_tokens": 97,
+        "latency_seconds": 0.9527584000024945,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 179,
+        "output_tokens": 86,
+        "latency_seconds": 0.9052011000458151,
+        "api_calls": 1
+      }
+    ],
+    "CoT-rationale": [
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 211,
+        "output_tokens": 70,
+        "latency_seconds": 0.7926492000697181,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 206,
+        "output_tokens": 73,
+        "latency_seconds": 0.7717794000636786,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 84,
+        "latency_seconds": 0.9458132999716327,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 204,
+        "output_tokens": 73,
+        "latency_seconds": 0.7661029000300914,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 205,
+        "output_tokens": 89,
+        "latency_seconds": 0.9394181999377906,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 80,
+        "latency_seconds": 1.0995471000205725,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 204,
+        "output_tokens": 89,
+        "latency_seconds": 0.9762217999668792,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 204,
+        "output_tokens": 83,
+        "latency_seconds": 1.223713899962604,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 56,
+        "latency_seconds": 0.9384277999633923,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 81,
+        "latency_seconds": 1.1179626999655738,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 203,
+        "output_tokens": 180,
+        "latency_seconds": 1.8681805999949574,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 207,
+        "output_tokens": 116,
+        "latency_seconds": 1.4358628999907523,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": false,
+        "input_tokens": 205,
+        "output_tokens": 172,
+        "latency_seconds": 1.9251110000768676,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 74,
+        "latency_seconds": 0.9198086999822408,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 200,
+        "output_tokens": 157,
+        "latency_seconds": 1.4972181000048295,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 201,
+        "output_tokens": 70,
+        "latency_seconds": 0.924956199945882,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 137,
+        "latency_seconds": 1.4615053000161424,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": false,
+        "input_tokens": 203,
+        "output_tokens": 137,
+        "latency_seconds": 1.7293480000225827,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 203,
+        "output_tokens": 180,
+        "latency_seconds": 2.1738559999503195,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 73,
+        "latency_seconds": 0.8724761001067236,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 204,
+        "output_tokens": 110,
+        "latency_seconds": 1.414303799974732,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 199,
+        "output_tokens": 82,
+        "latency_seconds": 1.0453915999969468,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 208,
+        "output_tokens": 85,
+        "latency_seconds": 0.9958398999879137,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 83,
+        "latency_seconds": 0.9316360999364406,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 87,
+        "latency_seconds": 1.1161605999805033,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 133,
+        "latency_seconds": 1.6725379000417888,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 204,
+        "output_tokens": 88,
+        "latency_seconds": 0.9391995000187308,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 201,
+        "output_tokens": 89,
+        "latency_seconds": 1.4446756000397727,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 75,
+        "latency_seconds": 0.9506926001049578,
+        "api_calls": 1
+      },
+      {
+        "prediction": "kyc",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 78,
+        "latency_seconds": 0.8957677000435069,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 206,
+        "output_tokens": 62,
+        "latency_seconds": 1.187941599986516,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 205,
+        "output_tokens": 85,
+        "latency_seconds": 1.0455480000237003,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 206,
+        "output_tokens": 93,
+        "latency_seconds": 1.1519092000089586,
+        "api_calls": 1
+      },
+      {
+        "prediction": "refund",
+        "correct": false,
+        "input_tokens": 204,
+        "output_tokens": 147,
+        "latency_seconds": 2.136306400061585,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 201,
+        "output_tokens": 75,
+        "latency_seconds": 0.9648480000905693,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 206,
+        "output_tokens": 135,
+        "latency_seconds": 1.3538643000647426,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 117,
+        "latency_seconds": 1.165623200009577,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 92,
+        "latency_seconds": 1.0027329999720678,
+        "api_calls": 1
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "correct": false,
+        "input_tokens": 207,
+        "output_tokens": 180,
+        "latency_seconds": 1.7946366999531165,
+        "api_calls": 1
+      },
+      {
+        "prediction": "escalate",
+        "correct": true,
+        "input_tokens": 203,
+        "output_tokens": 102,
+        "latency_seconds": 1.1470765999983996,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 200,
+        "output_tokens": 104,
+        "latency_seconds": 1.0545225999085233,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 200,
+        "output_tokens": 135,
+        "latency_seconds": 1.2396435999544337,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 93,
+        "latency_seconds": 0.9321856000460684,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 200,
+        "output_tokens": 164,
+        "latency_seconds": 1.895802199956961,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 153,
+        "latency_seconds": 1.6960879999678582,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 108,
+        "latency_seconds": 1.5718532999744639,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 110,
+        "latency_seconds": 1.4020265999715775,
+        "api_calls": 1
+      },
+      {
+        "prediction": "payment",
+        "correct": false,
+        "input_tokens": 202,
+        "output_tokens": 81,
+        "latency_seconds": 1.0835089999018237,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 201,
+        "output_tokens": 144,
+        "latency_seconds": 2.3170009000459686,
+        "api_calls": 1
+      },
+      {
+        "prediction": "inquire",
+        "correct": true,
+        "input_tokens": 202,
+        "output_tokens": 98,
+        "latency_seconds": 1.2190234999870881,
+        "api_calls": 1
+      }
+    ],
+    "ReAct-2step": [
+      {
+        "prediction": "refund",
+        "input_tokens": 424,
+        "output_tokens": 97,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4849572000093758
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 409,
+        "output_tokens": 70,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.3739843000657856
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 408,
+        "output_tokens": 80,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.281141099985689
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 405,
+        "output_tokens": 82,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.203272799961269
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 407,
+        "output_tokens": 71,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1523229000158608
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 403,
+        "output_tokens": 79,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2904588000383228
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 405,
+        "output_tokens": 80,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2888853999320418
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 405,
+        "output_tokens": 78,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1901004001265392
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 401,
+        "output_tokens": 73,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2517772000283003
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 401,
+        "output_tokens": 78,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1094808999914676
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 407,
+        "output_tokens": 92,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.3745115000056103
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 415,
+        "output_tokens": 96,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.5265183999435976
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 411,
+        "output_tokens": 99,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.5149476999649778
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 410,
+        "output_tokens": 123,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4784848000854254
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 401,
+        "output_tokens": 105,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2876959000714123
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 408,
+        "output_tokens": 90,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2409121000673622
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 407,
+        "output_tokens": 105,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 2.2648434001021087
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 407,
+        "output_tokens": 113,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4425803000340238
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 407,
+        "output_tokens": 118,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.5964118001284078
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 405,
+        "output_tokens": 99,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.3548293000785634
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 407,
+        "output_tokens": 86,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4429215000709519
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 402,
+        "output_tokens": 77,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1095812000567093
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 415,
+        "output_tokens": 85,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1600865999935195
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 410,
+        "output_tokens": 78,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1368604999734089
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 403,
+        "output_tokens": 75,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.370701999985613
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 408,
+        "output_tokens": 93,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4312866000691429
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 407,
+        "output_tokens": 90,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4982240000972524
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 401,
+        "output_tokens": 75,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1800117001403123
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 410,
+        "output_tokens": 93,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.3507661001058295
+      },
+      {
+        "prediction": "kyc",
+        "input_tokens": 405,
+        "output_tokens": 83,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.3375641000457108
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 415,
+        "output_tokens": 80,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.087638899916783
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 413,
+        "output_tokens": 71,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.0712571998592466
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 415,
+        "output_tokens": 97,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2437442998634651
+      },
+      {
+        "prediction": "refund",
+        "input_tokens": 405,
+        "output_tokens": 143,
+        "api_calls": 2,
+        "correct": false,
+        "latency_seconds": 1.6407046999083832
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 405,
+        "output_tokens": 81,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1007934000808746
+      },
+      {
+        "prediction": "PARSE_FAIL",
+        "input_tokens": 413,
+        "output_tokens": 199,
+        "api_calls": 2,
+        "correct": false,
+        "latency_seconds": 2.025434899958782
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 414,
+        "output_tokens": 94,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.1782782998634502
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 409,
+        "output_tokens": 118,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.6376382000744343
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 417,
+        "output_tokens": 110,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 2.0961391001474112
+      },
+      {
+        "prediction": "escalate",
+        "input_tokens": 409,
+        "output_tokens": 98,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2705388999311253
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 401,
+        "output_tokens": 87,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4581496000755578
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 401,
+        "output_tokens": 86,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2319819000549614
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 405,
+        "output_tokens": 107,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.679878699942492
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 401,
+        "output_tokens": 117,
+        "api_calls": 2,
+        "correct": false,
+        "latency_seconds": 1.6225812999764457
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 410,
+        "output_tokens": 98,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.2604139999020845
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 405,
+        "output_tokens": 92,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.986909999861382
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 405,
+        "output_tokens": 96,
+        "api_calls": 2,
+        "correct": false,
+        "latency_seconds": 1.3360024000285193
+      },
+      {
+        "prediction": "payment",
+        "input_tokens": 405,
+        "output_tokens": 86,
+        "api_calls": 2,
+        "correct": false,
+        "latency_seconds": 1.2898145000217482
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 403,
+        "output_tokens": 87,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.5517789999721572
+      },
+      {
+        "prediction": "inquire",
+        "input_tokens": 405,
+        "output_tokens": 102,
+        "api_calls": 2,
+        "correct": true,
+        "latency_seconds": 1.4393260000506416
+      }
+    ]
+  }
+}
