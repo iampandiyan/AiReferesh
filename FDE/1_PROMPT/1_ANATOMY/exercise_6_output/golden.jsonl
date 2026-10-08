@@ -1,0 +1,20 @@
+{"query": "Procesa el refund de pay_TEST29Qw, 18 dolares porfa", "expected": "refund"}
+{"query": "Quiero mi refund del order que se cancelo", "expected": "refund"}
+{"query": "Cuando llega el refund a mi bank account?", "expected": "refund"}
+{"query": "El refund de merch_4471 sigue pending, procesa please", "expected": "refund"}
+{"query": "El payment fallo pero me cobraron la card", "expected": "payment"}
+{"query": "Crea un payment link de 60 dolares para un customer", "expected": "payment"}
+{"query": "Por que el charge aparece dos veces en pay_TEST88Zx?", "expected": "payment"}
+{"query": "El settlement no llego ni despues de T+2", "expected": "settlement"}
+{"query": "Quiero update mi settlement bank account", "expected": "settlement"}
+{"query": "Cuando es el next payout de merch_2210?", "expected": "settlement"}
+{"query": "Por que el KYC esta pending todavia?", "expected": "kyc"}
+{"query": "El KYC document no sube, dice error", "expected": "kyc"}
+{"query": "Necesito verificar mi identidad para activar payouts", "expected": "kyc"}
+{"query": "Mi card tiene 4 unauthorized transactions, es fraud", "expected": "escalate"}
+{"query": "Alguien hizo un charge que yo no autorice", "expected": "escalate"}
+{"query": "Creo que mi cuenta fue hacked, hay pagos raros", "expected": "escalate"}
+{"query": "Un customer puso un dispute por wrong amount, urgent", "expected": "escalate"}
+{"query": "Que es este transaction id en mi dashboard?", "expected": "inquire"}
+{"query": "Como cambio de bank transfer a card payouts?", "expected": "inquire"}
+{"query": "Cuales son los fees para international cards?", "expected": "inquire"}
