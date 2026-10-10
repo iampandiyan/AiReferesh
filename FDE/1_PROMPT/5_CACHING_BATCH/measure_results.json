@@ -1,0 +1,643 @@
+{
+  "summaries": {
+    "baseline_realtime": {
+      "calls": 20,
+      "mean_prompt_tokens": 104.25,
+      "mean_cached_prompt_tokens": 95,
+      "mean_completion_tokens": 179.65,
+      "mean_latency_seconds": 1.2610003299894743,
+      "p95_latency_seconds": 1.5748886000365019,
+      "cost_per_call": null
+    },
+    "stable_prefix_realtime": {
+      "calls": 20,
+      "mean_prompt_tokens": 3825.25,
+      "mean_cached_prompt_tokens": 2509,
+      "mean_completion_tokens": 179.6,
+      "mean_latency_seconds": 1.167097355000442,
+      "p95_latency_seconds": 1.2716189000057057,
+      "cost_per_call": null
+    },
+    "overnight_concurrent": {
+      "calls": 20,
+      "mean_prompt_tokens": 3825.25,
+      "mean_cached_prompt_tokens": 3824.25,
+      "mean_completion_tokens": 180,
+      "mean_latency_seconds": 1.5282138949842192,
+      "p95_latency_seconds": 1.8765056000556797,
+      "cost_per_call": null
+    },
+    "blended_70_30": {
+      "cost_per_call": null,
+      "calls": 20
+    }
+  },
+  "calls": {
+    "baseline_realtime": [
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 105,
+        "cached_prompt_tokens": 69,
+        "completion_tokens": 180,
+        "latency_seconds": 2.627806399948895,
+        "response": "\u00a1Claro! Para procesar el reembolso de **$18\u202fUSD** del cargo **pay_TEST29Qw** tienes dos opciones:\n\n1. **Desde el Dashboard**",
+        "cost_usd": null,
+        "custom_id": "stripe-q-000"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 99,
+        "cached_prompt_tokens": 85,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0317707000067458,
+        "response": "Hola, lamento que tu payout no haya llegado a\u00fan. Los payouts de Stripe se procesan en T+2\u202fd\u00edas h\u00e1biles, pero el tiempo que tarda el banco en acreditar el dinero puede variar (fines de semana, feriados o tiempos de procesamiento del banco receptor).\n\n1.\u202fRevisa la secci\u00f3n **Pagos > Payouts** en tu Dashboard",
+        "cost_usd": null,
+        "custom_id": "stripe-q-001"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 98,
+        "cached_prompt_tokens": 85,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0687042999779806,
+        "response": "El estado **\u201cKYC pending\u201d** significa que a\u00fan no hemos podido concluir la verificaci\u00f3n de tu cuenta. Esto suele ocurrir por alguna de estas razones:\n\n1. **Documentos incompletos o no legibles** \u2013 La identificaci\u00f3n, comprobante de domicilio o datos de la empresa pueden faltar o estar borrosos.  \n2. **Datos que no coinciden** \u2013 La informaci\u00f3n que ingresaste (nombre, direcci\u00f3n, n\u00famero de identificaci\u00f3n fiscal, etc.) no coincide con lo que aparece en los documentos.",
+        "cost_usd": null,
+        "custom_id": "stripe-q-002"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 97,
+        "cached_prompt_tokens": 86,
+        "completion_tokens": 180,
+        "latency_seconds": 1.454389400081709,
+        "response": "Hola, lamento lo ocurrido.\u202fCuando un intento de pago falla, a veces la autorizaci\u00f3n de la tarjeta se mantiene y parece que se cobr\u00f3, pero el cargo final se revierte autom\u00e1ticamente\u202f(entre 3\u202fy 7\u202fd\u00edas h\u00e1biles, seg\u00fan el banco emisor).\n\nPara ayudarte mejor, por favor revisa en tu Dashboard:\n\n1. **Busca el ID del pago** (ej.",
+        "cost_usd": null,
+        "custom_id": "stripe-q-003"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 96,
+        "cached_prompt_tokens": 85,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1722102999920025,
+        "response": "Lo siento mucho por lo que est\u00e1 pasando. Por favor, siga estos pasos:\n\n1. **Revise el historial** en su Dashboard de Stripe \u2192\u202fPagos \u2192\u202fTransacciones para identificar los cargos no autorizados.  \n2. **Bloquee o reemita la tarjeta** contactando al banco emisor lo antes posible.  \n3. **Inicie una disputa** para cada cargo fraudulento desde el Dashboard (Detalles\u202f\u2192\u202fDisputar) o, si prefiere, podemos abrirlas por usted.  \n4. **Actualice la",
+        "cost_usd": null,
+        "custom_id": "stripe-q-004"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 112,
+        "cached_prompt_tokens": 102,
+        "completion_tokens": 180,
+        "latency_seconds": 1.5748886000365019,
+        "response": "\u00a1Claro! Para procesar el reembolso de **$18** al pago **pay_TEST29Qw**, sigue estos pasos:\n\n1. Inicia sesi\u00f3n en tu Dashboard de Stripe.  \n2. Ve a **Pagos** y busca el ID **pay_TEST29Qw**.  \n3. Haz clic en el pago y selecciona **Reembolsar**.  \n4. Introduce **$18.00** (o 1800\u202fcents) como el monto a reembolsar.  \n5. Opcional",
+        "cost_usd": null,
+        "custom_id": "stripe-q-005"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 106,
+        "cached_prompt_tokens": 96,
+        "completion_tokens": 180,
+        "latency_seconds": 0.9263679999858141,
+        "response": "Entiendo que el payout esperado no se acredit\u00f3 despu\u00e9s del plazo est\u00e1ndar\u202fT+2.\n\nPara poder investigarlo r\u00e1pidamente, por favor facil\u00edtame:\n\n1. El ID del payout (o el n\u00famero de referencia) que aparece en tu Dashboard.  \n2. Los \u00faltimos 4 d\u00edgitos de la cuenta bancaria a la",
+        "cost_usd": null,
+        "custom_id": "stripe-q-006"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 105,
+        "cached_prompt_tokens": 95,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1702623000601307,
+        "response": "El KYC sigue pendiente porque todav\u00eda no se han verificado los documentos que enviaste. Revisa que la foto sea clara, que todos los campos est\u00e9n legibles y que el documento no est\u00e9 expirado. Si todo est\u00e1 correcto, el proceso suele completarse en 1\u20112\u202fd\u00edas;",
+        "cost_usd": null,
+        "custom_id": "stripe-q-007"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 104,
+        "cached_prompt_tokens": 94,
+        "completion_tokens": 180,
+        "latency_seconds": 1.3477700999937952,
+        "response": "Hola, lamento lo sucedido. Para poder revisar este caso (synthetic\u202f008) necesito que me proporciones:\n\n1. El **ID del PaymentIntent** o del cargo que ves en tu Dashboard.  \n2. Los **\u00faltimos 4 d\u00edgitos** de",
+        "cost_usd": null,
+        "custom_id": "stripe-q-008"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 103,
+        "cached_prompt_tokens": 93,
+        "completion_tokens": 180,
+        "latency_seconds": 0.9727083999896422,
+        "response": "Entiendo que est\u00e1 viendo cargos no autorizados en su tarjeta y sospecha fraude (caso sint\u00e9tico\u202f009). Por favor, siga estos pasos:\n\n1. **Revise los cargos en",
+        "cost_usd": null,
+        "custom_id": "stripe-q-009"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 112,
+        "cached_prompt_tokens": 107,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0344401999609545,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-010"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 106,
+        "cached_prompt_tokens": 101,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1985609999392182,
+        "response": "Entiendo que el settlement no se ha reflejado despu\u00e9s del plazo T+2. Para poder investigarlo, por favor comparte:\n\n1. El **n\u00famero de referencia** de la transacci\u00f3n (ID de pago o n\u00famero de autorizaci\u00f3n).  \n2. La **fecha y hora** en que se realiz\u00f3 el cargo.  \n3. El **monto** exacto y la **moneda** involucrada.  \n\nCon esa informaci\u00f3n podremos revisar el estado del settlement y darte una soluci\u00f3n lo",
+        "cost_usd": null,
+        "custom_id": "stripe-q-011"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 105,
+        "cached_prompt_tokens": 100,
+        "completion_tokens": 173,
+        "latency_seconds": 1.2292844000039622,
+        "response": "El estado \u201cpending\u201d indica que todav\u00eda estamos revisando la informaci\u00f3n que enviaste.  \nAseg\u00farate de haber subido **todos los documentos requeridos** (identificaci\u00f3n oficial, comprobante de domicilio y, si corresponde, documentaci\u00f3n de la entidad legal). Si ya los enviaste, la revisi\u00f3n puede tardar entre 24\u201148\u202fhoras.  \n\nRevisa tu bandeja de correo por si necesitamos informaci\u00f3n adicional; de lo contrario, el KYC se completar\u00e1 autom\u00e1ticamente una vez finalizada la verificaci\u00f3n.",
+        "cost_usd": null,
+        "custom_id": "stripe-q-012"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 104,
+        "cached_prompt_tokens": 99,
+        "completion_tokens": 180,
+        "latency_seconds": 1.5282271000323817,
+        "response": "Lamento lo sucedido. Cuando un pago aparece como fallido, normalmente solo se genera una autorizaci\u00f3n que queda pendiente y se libera autom\u00e1ticamente\u202f\u2013\u202fno deber\u00eda haber cobro definitivo.  \n\n1. Verifica en el historial si el cargo est\u00e1 marcado como **\u201cautorizaci\u00f3n pendiente\u201d** o como **",
+        "cost_usd": null,
+        "custom_id": "stripe-q-013"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 103,
+        "cached_prompt_tokens": 98,
+        "completion_tokens": 180,
+        "latency_seconds": 1.18449909996707,
+        "response": "Lamento lo que est\u00e1 pasando con su tarjeta. Le recomiendo lo siguiente:\n\n1. **Bloquee la tarjeta** inmediatamente a trav\u00e9s de la app o del sitio web de su banco para evitar m\u00e1s cargos.  \n2. **Contacte a su emisor** y reporte los cargos no autorizados; ellos iniciar\u00e1n el proceso de disputa y le emitir\u00e1n un nuevo n\u00famero de tarjeta.  \n3. **Env\u00ede un reporte de fraude a Stripe",
+        "cost_usd": null,
+        "custom_id": "stripe-q-014"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 112,
+        "cached_prompt_tokens": 107,
+        "completion_tokens": 180,
+        "latency_seconds": 1.259534899960272,
+        "response": "\u00a1Claro! Para iniciar el reembolso de **$18\u202fUSD** del cargo **pay_TEST29Qw**, por favor confirma:\n\n1. El motivo del reembolso (p.\u202fej., devoluci\u00f3n de producto, cancelaci\u00f3n, etc.).  \n2. Que el importe y el ID del cargo son correctos.\n\nUna vez que me lo confirmes, te indicar\u00e9 los pasos exactos para completarlo en tu dashboard o, si",
+        "cost_usd": null,
+        "custom_id": "stripe-q-015"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 106,
+        "cached_prompt_tokens": 101,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0141690999735147,
+        "response": "Hola, lamento que el payout no haya llegado despu\u00e9s del plazo T+2.\n\n1. **Revisa tu calendario de payouts** en el panel\u202fStripe \u2192 *Payments* \u2192 *Payouts* para confirmar la fecha programada.  \n2. Verifica que tu cuenta tenga **todos los requisitos de verificaci\u00f3n completados** (identidad,",
+        "cost_usd": null,
+        "custom_id": "stripe-q-016"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 105,
+        "cached_prompt_tokens": 100,
+        "completion_tokens": 180,
+        "latency_seconds": 0.9700352000072598,
+        "response": "El estado\u202f\u201cpending\u201d del KYC suele deberse a que la revisi\u00f3n de la documentaci\u00f3n a\u00fan no se ha completado. Las causas m\u00e1s comunes son:\n\n1. **Documentos incompletos o ilegibles** \u2013\u202fAseg\u00farate de que los archivos sean claros, sin cortes ni sombras.\n2. **Informaci\u00f3n que falta** \u2013\u202fRe",
+        "cost_usd": null,
+        "custom_id": "stripe-q-017"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 104,
+        "cached_prompt_tokens": 99,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1781935999169946,
+        "response": "Hola, lamento lo ocurrido.\n\nEn los casos en que el pago aparece como **\u201cfailed\u201d** pero la tarjeta muestra un cargo, normalmente se trata de una **autorizaci\u00f3n** que se qued\u00f3 pendiente y que, al no completarse la captura, ser\u00e1 revertida autom\u00e1ticamente\u202f\u2013\u202fnormalmente en\u202f7\u202fd\u00edas h\u00e1biles (hasta 5\u202fd\u00edas en la mayor\u00eda de los emisores).\n\n**Qu\u00e9 puedes hacer:**\n\n1. **Revisa el detalle",
+        "cost_usd": null,
+        "custom_id": "stripe-q-018"
+      },
+      {
+        "mode": "baseline_realtime",
+        "prompt_tokens": 103,
+        "cached_prompt_tokens": 98,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2761834999546409,
+        "response": "Entiendo que tu tarjeta est\u00e1 mostrando transacciones no autorizadas y sospechas de fraude (caso sint\u00e9tico\u202f019). Por favor, env\u00edanos los \u00faltimos\u202f4\u202fd\u00edgitos de la tarjeta y",
+        "cost_usd": null,
+        "custom_id": "stripe-q-019"
+      }
+    ],
+    "stable_prefix_realtime": [
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2191173998871818,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-000"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3820,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1708631999790668,
+        "response": "El plazo de liquidaci\u00f3n depende de la configuraci\u00f3n de tu cuenta (pago autom\u00e1tico diario, en reposo, etc.). En la mayor\u00eda de los casos, los fondos se transfieren dentro del ciclo de\u202fT+1\u202fo\u202fT+2\u202fd\u00edas h\u00e1biles, pero si tu cuenta est\u00e1 configurada para pagos semanales",
+        "cost_usd": null,
+        "custom_id": "stripe-q-001"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3819,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2486307000508532,
+        "response": "El estado \u201cpending\u201d del KYC indica que la verificaci\u00f3n de tu negocio a\u00fan no ha sido aprobada. Esto ocurre cuando:\n\n1. **Faltan documentos** o alguno de los que envias",
+        "cost_usd": null,
+        "custom_id": "stripe-q-002"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3818,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0328950000694022,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-003"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3817,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1129379000049084,
+        "response": "Lamento mucho lo que est\u00e1 ocurriendo. Las transacciones no autorizadas se deben escalar de inmediato. Por favor:\n\n1. Bloquee la tarjeta desde el dashboard o la app para evitar m\u00e1s cargos.  \n2. Inicie un **dispute** (reclamaci\u00f3n) para cada cargo fraudulento en\u202fStripe\u202fDashboard \u2192\u202fPayments \u2192\u202fSeleccionar el pago \u2192\u202fReportar como no autorizado.  \n3. Cambie sus credenciales de",
+        "cost_usd": null,
+        "custom_id": "stripe-q-004"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3823,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0632103000534698,
+        "response": "Para procesar un reembolso de **$18\u202fUSD** en el cargo",
+        "cost_usd": null,
+        "custom_id": "stripe-q-005"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3817,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0382341999793425,
+        "response": "El hecho de que el payout no haya llegado despu\u00e9s de T\u202f+\u202f2 d\u00edas suele deberse a la",
+        "cost_usd": null,
+        "custom_id": "stripe-q-006"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3816,
+        "completion_tokens": 180,
+        "latency_seconds": 1.515654299990274,
+        "response": "El estado\u202f**pending**\u202fdel KYC indica que a\u00fan no se ha completado la verificaci\u00f3n de tu negocio. Para que el proceso pase a \u201caprobado\u201d debes:\n\n1. **Revisar el correo electr\u00f3nico** que enviamos al registrarte; all\u00ed encontrar\u00e1s una lista de los documentos que faltan (identificaci\u00f3n oficial, prueba de domicilio, documentos de constituci\u00f3n de la empresa, etc.).  \n2. **Subir los documentos solicitados** a trav\u00e9s del Centro de usuarios \u2192\u202fConfiguraci\u00f3n",
+        "cost_usd": null,
+        "custom_id": "stripe-q-007"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2410422000102699,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-008"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 72,
+        "completion_tokens": 172,
+        "latency_seconds": 1.147982700029388,
+        "response": "Entiendo que est\u00e1 viendo transacciones no autorizadas y sospecha de fraude. Por motivos de seguridad, ese tipo de actividad debe escalarse al equipo especializado de Stripe.\n\nPor favor, abra un caso en el Centro de Soporte de Stripe indicando\u202f\u201cactividad no autorizada / posible fraude\u201d y proporcione cualquier detalle que tenga (por ejemplo, los ID de los cargos o la fecha aproximada). Nuestro equipo investigar\u00e1 de inmediato, bloquear\u00e1 los cargos si es necesario y le orientar\u00e1 sobre los siguientes pasos para proteger su cuenta.",
+        "cost_usd": null,
+        "custom_id": "stripe-q-009"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3828,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2378873999696225,
+        "response": "Para emitir el reembolso de **$18\u202fUSD** en el cargo **pay_TEST29Qw** sigue estos pasos:\n\n1. **Panel de Stripe**  \n   - Ve a",
+        "cost_usd": null,
+        "custom_id": "stripe-q-010"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3822,
+        "completion_tokens": 180,
+        "latency_seconds": 1.091743600089103,
+        "response": "El plazo de liquidaci\u00f3n depende de la configuraci\u00f3n de tu cuenta (p.\u202fej., calendario de payouts y el m\u00e9todo de banco asociado). En la mayor\u00eda de los comercios Stripe el \u201cT+2\u201d es el tiempo est\u00e1ndar, pero si tu cuenta est\u00e1 configur",
+        "cost_usd": null,
+        "custom_id": "stripe-q-011"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3821,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2716189000057057,
+        "response": "El proceso de KYC sigue en estado **pending** porque la verificaci\u00f3n de tu negocio a\u00fan no ha sido aprobada. Esto puede deberse a:\n\n1. **Documentaci\u00f3n incompleta o faltante** \u2013 Aseg\u00farate de haber subido todos los documentos requeridos (identificaci\u00f3n oficial, prueba de domicilio, documentaci\u00f3n de la empresa, etc",
+        "cost_usd": null,
+        "custom_id": "stripe-q-012"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 3820,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2076144999591634,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-013"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 3819,
+        "completion_tokens": 180,
+        "latency_seconds": 1.0707717998884618,
+        "response": "Lo siento mucho por lo que est\u00e1 pasando.\u202fLos cargos no autorizados se consideran una actividad potencialmente fraudulenta y deben ser escalados a nuestro equipo de seguridad.\n\nPor favor, haga lo siguiente:\n\n1. **Bloquee la tarjeta** en la secci\u00f3n\u202f*Tarjetas*\u202fde su Dashboard para evitar m\u00e1s cargos.  \n2. **Reporte los cargos** a trav\u00e9s",
+        "cost_usd": null,
+        "custom_id": "stripe-q-014"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3828,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1658493999857455,
+        "response": "Entiendo que deseas reembolsar $18\u202fUSD del cargo **pay_TEST29Qw**. Para procesar el reembolso, sigue uno de estos pasos:\n\n1. **Panel de Stripe**  \n   - Ve a *Payments* \u2192 busca el cargo **pay_TEST29Qw**.  \n   - Haz clic en **Refund** y especifica el monto de $18\u202fUSD.  \n\n2. **API** (si usas c\u00f3digo)  \n   ```bash\n   curl https://api.stripe.com/v1/refunds \\\n     -u sk",
+        "cost_usd": null,
+        "custom_id": "stripe-q-015"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3822,
+        "completion_tokens": 180,
+        "latency_seconds": 1.170572700095363,
+        "response": "El settlement\u202fdeber\u00eda aparecer",
+        "cost_usd": null,
+        "custom_id": "stripe-q-016"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3821,
+        "completion_tokens": 180,
+        "latency_seconds": 0.9878030000254512,
+        "response": "El estado *pending* del KYC indica que tu verificaci\u00f3n de negocio a\u00fan no ha sido aprobada. Esto suele ocurrir cuando:\n\n1. Falta alguno de los documentos requeridos o la informaci\u00f3n enviada est\u00e1 incompleta.  \n2. Los documentos enviados est\u00e1n en proceso de revisi\u00f3n por nuestro equipo de cumplimiento.  \n\nPara que el KYC cambie a *approved* debes asegurarte de haber subido todos los documentos solicitados (identificaci\u00f3n oficial, comprobante de domicilio, registro de",
+        "cost_usd": null,
+        "custom_id": "stripe-q-017"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 3820,
+        "completion_tokens": 180,
+        "latency_seconds": 1.2445541999768466,
+        "response": "Entiendo que la transacci\u00f3n aparece como **fallida** pero la tarjeta del cliente result\u00f3",
+        "cost_usd": null,
+        "custom_id": "stripe-q-018"
+      },
+      {
+        "mode": "stable_prefix_realtime",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 3819,
+        "completion_tokens": 180,
+        "latency_seconds": 1.1029636999592185,
+        "response": "Lamento que est\u00e9 viendo transacciones no autorizadas en su tarjeta.\u202fEsto se considera actividad sospechosa y lo escalaremos inmediatamente a nuestro equipo de prevenci\u00f3n de fraude.\n\n**Pr\u00f3ximos pasos:**\n1. **Bloquee la tarjeta** desde el Dashboard o la app para evitar m\u00e1s cargos.\n2. **Revise los detalles de las transacciones** (fecha, monto y comerciante) y anote cualquier informaci\u00f3n adicional que tenga.\n3. **En",
+        "cost_usd": null,
+        "custom_id": "stripe-q-019"
+      }
+    ],
+    "overnight_concurrent": [
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3825,
+        "completion_tokens": 180,
+        "latency_seconds": 1.5254945000633597,
+        "response": "Para poder emitir el reembolso de **pay_TEST29Qw** por\u202fUSD\u202f18, primero debemos confirmar que el pago se encuentre en estado *capturado* (no pendiente ni cancelado). Si el pago ya",
+        "cost_usd": null,
+        "custom_id": "stripe-q-000"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3820,
+        "cached_prompt_tokens": 3819,
+        "completion_tokens": 180,
+        "latency_seconds": 1.8800496999174356,
+        "response": "El tiempo de liquidaci\u00f3n depende de la configuraci\u00f3n de tu cuenta (programaci\u00f3n de payouts). En la mayor\u00eda de las cuentas Stripe los fondos se transfieren al banco al siguiente d\u00eda h\u00e1bil despu\u00e9s",
+        "cost_usd": null,
+        "custom_id": "stripe-q-001"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3819,
+        "cached_prompt_tokens": 3818,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4824585999595001,
+        "response": "El estado *pending* en el proceso KYC indica que la verificaci\u00f3n de tu negocio a\u00fan est\u00e1 en revisi\u00f3n. Para que se apruebe, debes asegurarte de haber enviado toda la documentaci\u00f3n solicitada (identificaci\u00f3n oficial, comprobante de domicilio, documentos de constituci\u00f3n de la empresa, etc.) y que cumpla con los requisitos de formato y legibilidad.\n\nRevisa en el panel de\u202f**Settings\u202f\u2192\u202fBusiness verification**\u202fsi falta alg\u00fan archivo o si alguna informaci\u00f3n necesita",
+        "cost_usd": null,
+        "custom_id": "stripe-q-002"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3818,
+        "cached_prompt_tokens": 3817,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4876739999745041,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-003"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3817,
+        "cached_prompt_tokens": 3816,
+        "completion_tokens": 180,
+        "latency_seconds": 1.8765056000556797,
+        "response": "Lamentamos que est\u00e9 viendo cargos no autorizados en su tarjeta.\u202fEsto se considera actividad fraudulenta y debe ser escalado de inmediato.\n\n1. **Bloquee la tarjeta**\u202ftan pronto como le sea posible desde el panel de\u202fStripe\u202fo, si la tarjeta es",
+        "cost_usd": null,
+        "custom_id": "stripe-q-004"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3832,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4866717999102548,
+        "response": "Para poder iniciar el reembolso necesitamos confirmar que el pago **pay_TEST29Qw** est\u00e1 en estado *succeeded* y que a\u00fan no ha sido reembolsado total o parcialmente. Por favor verifica el estado del cargo en tu panel de Stripe y, si est\u00e1 elegible, ind\u00edcanos que deseas proceder con el reembolso de\u202f$18\u202fUSD. Con esa",
+        "cost_usd": null,
+        "custom_id": "stripe-q-005"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3826,
+        "completion_tokens": 180,
+        "latency_seconds": 1.476430100039579,
+        "response": "El tiempo de liquidaci\u00f3n depende de la configuraci\u00f3n de tu cuenta (p.\u202fej., calendario de",
+        "cost_usd": null,
+        "custom_id": "stripe-q-006"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3825,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4650321999797598,
+        "response": "El estado **pending** del KYC indica que la verificaci\u00f3n de tu negocio a\u00fan no se ha completado. Para que pase a \u201capproved\u201d debes:\n\n1. Revisar el correo electr\u00f3nico que Stripe te envi\u00f3 con los requisitos de documentaci\u00f3n.  \n2. Asegurarte de haber subido todos los documentos solicitados (identificaci\u00f3n oficial, comprobante de domicilio, documentos de la empresa, etc.) y de que sean legibles.  \n3. Confirmar que la informaci\u00f3n",
+        "cost_usd": null,
+        "custom_id": "stripe-q-007"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 3824,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4993106999900192,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-008"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 3823,
+        "completion_tokens": 180,
+        "latency_seconds": 1.5069468000438064,
+        "response": "Entiendo que est\u00e1 viendo transacciones no autorizadas en su tarjeta y sospecha de fraude.\u202fEste tipo de actividad debe ser escalada de inmediato a nuestro equipo de seguridad para que podamos investigarla y proteger su cuenta.\n\nLe recomendamos que:\n\n1. Bloquee la tarjeta afectada a trav\u00e9s de su emisor.\n2. Revise y actualice las credenciales de acceso a su cuenta Stripe (cambie la contrase\u00f1a y habilite la autenticaci\u00f3n de dos factores si a\u00fan no lo ha hecho).\n3. Env\u00ede una solicitud de revisi\u00f3n de actividad sospechosa a trav\u00e9s del centro de ayuda de",
+        "cost_usd": null,
+        "custom_id": "stripe-q-009"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3832,
+        "completion_tokens": 180,
+        "latency_seconds": 1.493557499954477,
+        "response": "Para poder emitir el reembolso de **$18\u202fUSD** en el cargo **pay_TEST29Qw** debes confirmar que el pago est\u00e9 en estado *succeeded* (pagado). Si el pago ya est\u00e1 completado, puedes crear el reembolso de las siguientes maneras:\n\n1. **Panel de Stripe**  \n   - Ve a **Payments** \u2192 busca el ID `pay_TEST29Qw`.  \n   -",
+        "cost_usd": null,
+        "custom_id": "stripe-q-010"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3826,
+        "completion_tokens": 180,
+        "latency_seconds": 1.509353999979794,
+        "response": "Entiendo que el dep\u00f3sito esperado no se ha reflejado aun despu\u00e9s de T\u202f+\u202f2",
+        "cost_usd": null,
+        "custom_id": "stripe-q-011"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3825,
+        "completion_tokens": 180,
+        "latency_seconds": 1.4938165999483317,
+        "response": "El estado **KYC\u202fpendiente** indica que la verificaci\u00f3n de tu negocio a\u00fan no ha sido aprobada. Para que se complete, revisa lo siguiente:\n\n1. **Documentaci\u00f3n requerida** \u2013 Aseg\u00farate de haber subido todos los documentos solicitados (identificaci\u00f3n oficial, comprobante de domicilio de la empresa, registro comercial, etc.).  \n2. **Calidad de los archivos** \u2013 Los documentos deben ser legibles, sin recortes ni sombras.  \n3. **Informaci\u00f3n coincidente** \u2013 Los datos en los documentos (nombre, direcci\u00f3n, n\u00famero de registro) deben coinc",
+        "cost_usd": null,
+        "custom_id": "stripe-q-012"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 3824,
+        "completion_tokens": 180,
+        "latency_seconds": 1.495401700027287,
+        "response": "Lamentamos lo ocurrido. Dado que la tarjeta se ha cobrado a pesar de que el pago figuro como fallido, necesitamos escalar este caso para que nuestro equipo de prevenci\u00f3n revise la transacci\u00f3n",
+        "cost_usd": null,
+        "custom_id": "stripe-q-013"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 3823,
+        "completion_tokens": 180,
+        "latency_seconds": 1.563975799945183,
+        "response": "Entiendo que est\u00e1 viendo transacciones no autorizadas y sospecha de fraude.\u202fVoy a escalar este caso a nuestro equipo especializado para que investigue y tome las medidas necesarias (bloqueo de la tarjeta, revisi\u00f3n de los cargos, etc.).  \n\nMientras tanto, le recomiendo:\n\n1. **Marcar la tarjeta como comprometida** en el Dashboard\u202f",
+        "cost_usd": null,
+        "custom_id": "stripe-q-014"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3833,
+        "cached_prompt_tokens": 3832,
+        "completion_tokens": 180,
+        "latency_seconds": 1.5618407999863848,
+        "response": "Entiendo que quieres emitir un reembolso de\u202fUSD\u202f18 para el pago\u202f`pay_TEST29Qw`. \n\nPara poder procesar el reembolso, necesitamos confirmar que el pago est\u00e1 en un estado que permite reembolsos (por ejemplo, **capturado** y **no liquidado**). Por favor, verifica en el Dashboard que el",
+        "cost_usd": null,
+        "custom_id": "stripe-q-015"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3827,
+        "cached_prompt_tokens": 3826,
+        "completion_tokens": 180,
+        "latency_seconds": 1.387319799978286,
+        "response": "El plazo de\u202fsettlement depende de la configuraci\u00f3n de tu cuenta",
+        "cost_usd": null,
+        "custom_id": "stripe-q-016"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3826,
+        "cached_prompt_tokens": 3825,
+        "completion_tokens": 180,
+        "latency_seconds": 1.3817062999587506,
+        "response": "El proceso de KYC sigue en estado **pending** porque la verificaci\u00f3n de tu negocio a\u00fan est\u00e1 bajo revisi\u00f3n. Para que se apruebe, es necesario que:\n\n1. **Asegures que todos los documentos solicitados est\u00e9n completos y legibles** (identificaci\u00f3n oficial, comprobante de domicilio, documentos de la empresa, etc.).\n2. **Confirma que la informaci\u00f3n coincida con la que tienes registrada en tu cuenta** (nombre, direcci\u00f3n, datos fiscales).\n\nRevisa en el centro de ayuda de Stripe la lista de documentos requeridos y, si falta alguno o alg\u00fan dato necesita correcci\u00f3n, s\u00fa",
+        "cost_usd": null,
+        "custom_id": "stripe-q-017"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3825,
+        "cached_prompt_tokens": 3824,
+        "completion_tokens": 180,
+        "latency_seconds": 1.374689199961722,
+        "response": "",
+        "cost_usd": null,
+        "custom_id": "stripe-q-018"
+      },
+      {
+        "mode": "overnight_concurrent",
+        "prompt_tokens": 3824,
+        "cached_prompt_tokens": 3823,
+        "completion_tokens": 180,
+        "latency_seconds": 1.6160422000102699,
+        "response": "Entiendo que observas transacciones no autorizadas en tu tarjeta y sospechas que pudiera tratarse de fraude.\n\n**Pr\u00f3ximos pasos recomendados**\n\n1. **Bloquea la tarjeta**\u202f\u2013 Contacta inmediatamente a tu banco o emisor para que suspenda la tarjeta y evite m\u00e1s cargos.\n2. **Revisa los cargos**\u202f\u2013 Anota los montos, fechas y descripciones de las transacciones que consideras fraudulentas. Esta informaci\u00f3n ser\u00e1 \u00fatil para la investigaci\u00f3n.\n3. **Informa a Stripe**\u202f\u2013 Marca los cargos como *",
+        "cost_usd": null,
+        "custom_id": "stripe-q-019"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "FDE prompt cost and cache study",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Approximate cost per customer/day",
+      "targets": [
+        {
+          "expr": "sum by (customer) (increase(gen_ai_cost_usd_total[1d]))"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "currencyUSD"
+        }
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "Provider-reported cache ratio",
+      "targets": [
+        {
+          "expr": "avg by (customer) (gen_ai_cache_hit_ratio)"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        }
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "name": "cache_hit_ratio_low",
+      "expr": "avg by (customer) (gen_ai_cache_hit_ratio) < 0.7",
+      "for": "5m"
+    }
+  ]
+}
