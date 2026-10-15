@@ -1,0 +1,61 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 751 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+(Synthetic Lending Policy - PDF Chunking Example) Tj
+T*
+(This fixture is fictional teaching content, not legal or financial advice.) Tj
+T*
+T*
+(Section 1 - Payment review) Tj
+T*
+(A captured payment may be reviewed when the request is within the configured window.) Tj
+T*
+(Confirm the synthetic payment reference before discussing next steps.) Tj
+T*
+T*
+(Section 2 - Evidence) Tj
+T*
+(Record the synthetic payment ID, requested amount, and short reason.) Tj
+T*
+(Example reference: pay_TEST_4421. Never use real customer or bank identifiers.) Tj
+T*
+T*
+(Section 3 - Escalation) Tj
+T*
+(Escalate unknown or conflicting states to a human reviewer.) Tj
+T*
+(Do not state that a refund was processed until a system confirms it.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1119
+%%EOF

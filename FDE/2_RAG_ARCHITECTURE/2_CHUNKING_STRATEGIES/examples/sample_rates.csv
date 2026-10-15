@@ -1,0 +1,4 @@
+Tier,AnnualRate,EffectiveDate,SourceReference
+Tier 1,6.50%,2026-10-01,RATE_TEST_001
+Tier 2,7.25%,2026-10-01,RATE_TEST_001
+Tier 3,8.10%,2026-10-01,RATE_TEST_001
