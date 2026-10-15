@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1120" viewBox="0 0 1480 1120" role="img" aria-labelledby="title description">
+  <title id="title">Exercise 7 sequential MCP middleware flow</title>
+  <desc id="description">A detailed sequence diagram with host, FastMCP client, MCP server middleware, and tool participants. Numbered messages show tool request, middleware interception, call_next, tool response, logging notification, client callback, and final tool result.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#344054"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#175CD3"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#039855"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #101828; }
+      .subtitle { font: 15px Arial, sans-serif; fill: #475467; }
+      .participant { font: 700 16px Arial, sans-serif; fill: #101828; }
+      .small { font: 13px Arial, sans-serif; fill: #475467; }
+      .msg { font: 14px Arial, sans-serif; fill: #344054; }
+      .code { font: 14px Consolas, monospace; fill: #175CD3; }
+      .num { font: 700 13px Arial, sans-serif; fill: #FFFFFF; }
+      .note-title { font: 700 15px Arial, sans-serif; fill: #101828; }
+      .note { font: 13px Arial, sans-serif; fill: #344054; }
+      .lifeline { stroke: #98A2B3; stroke-width: 1.5; stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+
+  <rect width="1480" height="1120" fill="#F9FAFB"/>
+  <text x="48" y="48" class="title">Exercise 7 — sequential middleware flow</text>
+  <text x="48" y="77" class="subtitle">Read from top to bottom. The numbered messages show one get_customer call, from host request to final response.</text>
+
+  <rect x="45" y="103" width="1390" height="92" rx="10" fill="#EFF8FF" stroke="#84CAFF"/>
+  <text x="68" y="133" class="note-title">Before any request: server setup</text>
+  <text x="68" y="161" class="code">mcp.add_middleware(ObservabilityMiddleware())</text>
+  <text x="520" y="161" class="note">Registers the middleware on this FastMCP server instance; subsequent tool calls pass through it.</text>
+
+  <rect x="76" y="225" width="220" height="64" rx="10" fill="#FFFFFF" stroke="#84CAFF" stroke-width="2"/>
+  <text x="186" y="251" text-anchor="middle" class="participant">Host code</text>
+  <text x="186" y="274" text-anchor="middle" class="small">host_exercise_07.py</text>
+
+  <rect x="390" y="225" width="220" height="64" rx="10" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="500" y="251" text-anchor="middle" class="participant">FastMCP Client</text>
+  <text x="500" y="274" text-anchor="middle" class="small">stdio connection</text>
+
+  <rect x="740" y="225" width="270" height="64" rx="10" fill="#F4F3FF" stroke="#BDB4FE" stroke-width="2"/>
+  <text x="875" y="251" text-anchor="middle" class="participant">Server middleware</text>
+  <text x="875" y="274" text-anchor="middle" class="small">ObservabilityMiddleware</text>
+
+  <rect x="1150" y="225" width="220" height="64" rx="10" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="1260" y="251" text-anchor="middle" class="participant">Tool function</text>
+  <text x="1260" y="274" text-anchor="middle" class="small">get_customer(...)</text>
+
+  <line x1="186" y1="289" x2="186" y2="1030" class="lifeline"/>
+  <line x1="500" y1="289" x2="500" y2="1030" class="lifeline"/>
+  <line x1="875" y1="289" x2="875" y2="1030" class="lifeline"/>
+  <line x1="1260" y1="289" x2="1260" y2="1030" class="lifeline"/>
+
+  <circle cx="64" cy="330" r="15" fill="#175CD3"/><text x="64" y="335" text-anchor="middle" class="num">1</text>
+  <line x1="186" y1="330" x2="494" y2="330" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="210" y="319" class="code">await client.call_tool("get_customer", {"customer_id": "c_FAKE"})</text>
+
+  <circle cx="64" cy="390" r="15" fill="#175CD3"/><text x="64" y="395" text-anchor="middle" class="num">2</text>
+  <line x1="500" y1="390" x2="869" y2="390" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="570" y="379" class="msg">MCP tools/call request over stdio</text>
+
+  <circle cx="64" cy="450" r="15" fill="#175CD3"/><text x="64" y="455" text-anchor="middle" class="num">3</text>
+  <rect x="805" y="430" width="140" height="42" rx="6" fill="#F4F3FF" stroke="#BDB4FE"/>
+  <text x="875" y="456" text-anchor="middle" class="code">on_call_tool()</text>
+  <text x="570" y="445" class="msg">Middleware intercepts the call; reads tool name and starts timer</text>
+
+  <circle cx="64" cy="520" r="15" fill="#175CD3"/><text x="64" y="525" text-anchor="middle" class="num">4</text>
+  <line x1="875" y1="520" x2="1254" y2="520" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="950" y="509" class="code">await call_next(context)</text>
+  <text x="950" y="541" class="small">Middleware hands the request to the actual tool</text>
+
+  <circle cx="64" cy="590" r="15" fill="#175CD3"/><text x="64" y="595" text-anchor="middle" class="num">5</text>
+  <rect x="1190" y="570" width="140" height="42" rx="6" fill="#ECFDF3" stroke="#75E0A7"/>
+  <text x="1260" y="596" text-anchor="middle" class="code">get_customer()</text>
+  <text x="1050" y="584" class="msg">Looks up the ID; for c_FAKE creates CUSTOMER_NOT_FOUND result</text>
+
+  <circle cx="64" cy="650" r="15" fill="#039855"/><text x="64" y="655" text-anchor="middle" class="num">6</text>
+  <line x1="1260" y1="650" x2="881" y2="650" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="1010" y="639" class="msg">Tool returns structured result to middleware</text>
+
+  <circle cx="64" cy="715" r="15" fill="#175CD3"/><text x="64" y="720" text-anchor="middle" class="num">7</text>
+  <rect x="765" y="695" width="220" height="48" rx="6" fill="#FFF7E8" stroke="#FEC84B"/>
+  <text x="875" y="716" text-anchor="middle" class="small">Stop timer; read error_code;</text>
+  <text x="875" y="735" text-anchor="middle" class="small">increment counters</text>
+  <text x="520" y="710" class="msg">Middleware prepares one JSON log record</text>
+
+  <circle cx="64" cy="785" r="15" fill="#175CD3"/><text x="64" y="790" text-anchor="middle" class="num">8</text>
+  <line x1="875" y1="785" x2="506" y2="785" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="545" y="774" class="code">await fastmcp_context.info(json.dumps(metrics))</text>
+  <text x="545" y="806" class="small">Sends an MCP logging notification; not the tool result</text>
+
+  <circle cx="64" cy="855" r="15" fill="#175CD3"/><text x="64" y="860" text-anchor="middle" class="num">9</text>
+  <line x1="500" y1="855" x2="192" y2="855" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="215" y="844" class="code">log_handler=show_log</text>
+  <text x="215" y="876" class="small">Client dispatches notification to host callback; host prints log</text>
+
+  <circle cx="64" cy="925" r="15" fill="#039855"/><text x="64" y="930" text-anchor="middle" class="num">10</text>
+  <line x1="875" y1="925" x2="506" y2="925" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="585" y="914" class="code">return result</text>
+  <text x="585" y="946" class="small">Middleware returns the original tool result unchanged</text>
+
+  <circle cx="64" cy="985" r="15" fill="#039855"/><text x="64" y="990" text-anchor="middle" class="num">11</text>
+  <line x1="500" y1="985" x2="192" y2="985" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="215" y="974" class="code">result.data</text>
+  <text x="215" y="1006" class="small">Client call completes; host prints the tool response separately</text>
+
+  <rect x="76" y="1040" width="1294" height="55" rx="10" fill="#FFF7E8" stroke="#FEC84B"/>
+  <text x="98" y="1064" class="note-title">Key distinction:</text>
+  <text x="214" y="1064" class="note">Step 8 is an in-flight log notification; step 11 is the tool-call response. They are separate messages.</text>
+  <text x="98" y="1085" class="note">The interaction repeats for the second host call (c_001), with error_code=null instead of CUSTOMER_NOT_FOUND.</text>
+</svg>

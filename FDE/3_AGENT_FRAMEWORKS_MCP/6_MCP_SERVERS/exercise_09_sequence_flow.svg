@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1420" viewBox="0 0 1500 1420" role="img" aria-labelledby="title description">
+  <title id="title">Exercise 9 server, client, and host sequence</title>
+  <desc id="description">Sequence diagram showing the host using a client wrapper, FastMCP Client, HTTP MCP server, and get_customer tool. It includes server startup, connection, tool discovery, a successful customer lookup, an unknown customer lookup, and shutdown.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#344054"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#175CD3"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#039855"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #101828; }
+      .subtitle { font: 15px Arial, sans-serif; fill: #475467; }
+      .part { font: 700 15px Arial, sans-serif; fill: #101828; }
+      .small { font: 13px Arial, sans-serif; fill: #475467; }
+      .msg { font: 14px Arial, sans-serif; fill: #344054; }
+      .code { font: 14px Consolas, monospace; fill: #175CD3; }
+      .number { font: 700 13px Arial, sans-serif; fill: #FFFFFF; }
+      .lifeline { stroke: #98A2B3; stroke-width: 1.5; stroke-dasharray: 7 7; }
+      .noteTitle { font: 700 15px Arial, sans-serif; fill: #101828; }
+      .note { font: 13px Arial, sans-serif; fill: #344054; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="1220" fill="#F9FAFB"/>
+  <text x="48" y="48" class="title">Exercise 9 — host, client, and HTTP MCP server</text>
+  <text x="48" y="77" class="subtitle">The host handles the user interaction; the client wrapper sends MCP requests; the server runs the tool.</text>
+
+  <rect x="48" y="100" width="1404" height="80" rx="10" fill="#EFF8FF" stroke="#84CAFF"/>
+  <text x="70" y="130" class="noteTitle">Start the server separately (Prompt 1)</text>
+  <text x="70" y="157" class="code">py exercise_09_package_entrypoint.py --http</text>
+  <text x="540" y="157" class="note">main() detects --http, runs FastMCP on 0.0.0.0:8000; client uses http://127.0.0.1:8000/mcp</text>
+
+  <rect x="55" y="216" width="205" height="68" rx="10" fill="#FFFFFF" stroke="#84CAFF" stroke-width="2"/>
+  <text x="157" y="243" text-anchor="middle" class="part">Host application</text>
+  <text x="157" y="266" text-anchor="middle" class="small">host_exercise_09.py</text>
+
+  <rect x="345" y="216" width="220" height="68" rx="10" fill="#FFFFFF" stroke="#BDB4FE" stroke-width="2"/>
+  <text x="455" y="243" text-anchor="middle" class="part">Client wrapper</text>
+  <text x="455" y="266" text-anchor="middle" class="small">Exercise09Client</text>
+
+  <rect x="650" y="216" width="220" height="68" rx="10" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="760" y="243" text-anchor="middle" class="part">FastMCP Client</text>
+  <text x="760" y="266" text-anchor="middle" class="small">HTTP transport</text>
+
+  <rect x="955" y="216" width="220" height="68" rx="10" fill="#F4F3FF" stroke="#BDB4FE" stroke-width="2"/>
+  <text x="1065" y="243" text-anchor="middle" class="part">MCP server</text>
+  <text x="1065" y="266" text-anchor="middle" class="small">FastMCP app / HTTP</text>
+
+  <rect x="1250" y="216" width="205" height="68" rx="10" fill="#ECFDF3" stroke="#75E0A7" stroke-width="2"/>
+  <text x="1352" y="243" text-anchor="middle" class="part">Tool function</text>
+  <text x="1352" y="266" text-anchor="middle" class="small">get_customer()</text>
+
+  <line x1="157" y1="284" x2="157" y2="1340" class="lifeline"/>
+  <line x1="455" y1="284" x2="455" y2="1340" class="lifeline"/>
+  <line x1="760" y1="284" x2="760" y2="1340" class="lifeline"/>
+  <line x1="1065" y1="284" x2="1065" y2="1340" class="lifeline"/>
+  <line x1="1352" y1="284" x2="1352" y2="1340" class="lifeline"/>
+
+  <circle cx="47" cy="327" r="15" fill="#175CD3"/><text x="47" y="332" text-anchor="middle" class="number">1</text>
+  <line x1="157" y1="327" x2="449" y2="327" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="190" y="316" class="code">connect_to_server()</text>
+
+  <circle cx="47" cy="380" r="15" fill="#175CD3"/><text x="47" y="385" text-anchor="middle" class="number">2</text>
+  <line x1="455" y1="380" x2="754" y2="380" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="520" y="369" class="code">Client(SERVER_URL)</text>
+
+  <circle cx="47" cy="433" r="15" fill="#175CD3"/><text x="47" y="438" text-anchor="middle" class="number">3</text>
+  <line x1="760" y1="433" x2="1059" y2="433" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="818" y="422" class="msg">Connect / MCP initialization over HTTP</text>
+  <text x="818" y="450" class="small">FastMCP client establishes a session with the server endpoint</text>
+
+  <circle cx="47" cy="497" r="15" fill="#039855"/><text x="47" y="502" text-anchor="middle" class="number">4</text>
+  <line x1="1059" y1="497" x2="766" y2="497" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="815" y="486" class="msg">Connection accepted; server info/capabilities returned</text>
+
+  <circle cx="47" cy="557" r="15" fill="#175CD3"/><text x="47" y="562" text-anchor="middle" class="number">5</text>
+  <line x1="157" y1="557" x2="449" y2="557" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="202" y="546" class="code">client.list_tools()</text>
+
+  <circle cx="47" cy="610" r="15" fill="#175CD3"/><text x="47" y="615" text-anchor="middle" class="number">6</text>
+  <line x1="455" y1="610" x2="754" y2="610" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="504" y="599" class="msg">Delegate list_tools()</text>
+
+  <circle cx="47" cy="663" r="15" fill="#175CD3"/><text x="47" y="668" text-anchor="middle" class="number">7</text>
+  <line x1="760" y1="663" x2="1059" y2="663" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="822" y="652" class="msg">tools/list request</text>
+
+  <circle cx="47" cy="716" r="15" fill="#039855"/><text x="47" y="721" text-anchor="middle" class="number">8</text>
+  <line x1="1059" y1="716" x2="766" y2="716" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="816" y="705" class="msg">Tool name, description, and schema returned</text>
+
+  <circle cx="47" cy="769" r="15" fill="#039855"/><text x="47" y="774" text-anchor="middle" class="number">9</text>
+  <line x1="760" y1="769" x2="461" y2="769" stroke="#039855" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="515" y="758" class="msg">list_tools() returns to wrapper</text>
+
+  <circle cx="47" cy="822" r="15" fill="#039855"/><text x="47" y="827" text-anchor="middle" class="number">10</text>
+  <line x1="455" y1="822" x2="163" y2="822" stroke="#039855" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="205" y="811" class="msg">Host displays available tools</text>
+
+  <rect x="70" y="847" width="1360" height="36" rx="8" fill="#F2F4F7"/>
+  <text x="90" y="871" class="noteTitle">Repeat for each customer ID entered (example uses c_001; c_FAKE follows the same path)</text>
+
+  <circle cx="47" cy="925" r="15" fill="#175CD3"/><text x="47" y="930" text-anchor="middle" class="number">11</text>
+  <line x1="157" y1="925" x2="449" y2="925" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="195" y="914" class="code">client.get_customer(customer_id)</text>
+
+  <circle cx="47" cy="978" r="15" fill="#175CD3"/><text x="47" y="983" text-anchor="middle" class="number">12</text>
+  <line x1="455" y1="978" x2="754" y2="978" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="512" y="967" class="code">call_tool("get_customer", {...})</text>
+
+  <circle cx="47" cy="1031" r="15" fill="#175CD3"/><text x="47" y="1036" text-anchor="middle" class="number">13</text>
+  <line x1="760" y1="1031" x2="1059" y2="1031" stroke="#175CD3" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="818" y="1020" class="msg">tools/call request with customer_id</text>
+
+  <circle cx="47" cy="1084" r="15" fill="#175CD3"/><text x="47" y="1089" text-anchor="middle" class="number">14</text>
+  <line x1="1065" y1="1084" x2="1346" y2="1084" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1111" y="1073" class="msg">Invoke registered tool</text>
+
+  <rect x="1190" y="1102" width="325" height="64" rx="8" fill="#ECFDF3" stroke="#75E0A7"/>
+  <text x="1207" y="1127" class="small">c_001 → customer record</text>
+  <text x="1207" y="1150" class="small">unknown ID → CUSTOMER_NOT_FOUND</text>
+
+  <circle cx="47" cy="1175" r="15" fill="#039855"/><text x="47" y="1180" text-anchor="middle" class="number">15</text>
+  <line x1="1352" y1="1175" x2="1071" y2="1175" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="1094" y="1166" class="msg">Tool returns matching data</text>
+
+  <circle cx="47" cy="1228" r="15" fill="#039855"/><text x="47" y="1233" text-anchor="middle" class="number">16</text>
+  <line x1="1065" y1="1228" x2="766" y2="1228" stroke="#039855" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="819" y="1219" class="msg">HTTP MCP tool result</text>
+
+  <circle cx="47" cy="1281" r="15" fill="#039855"/><text x="47" y="1286" text-anchor="middle" class="number">17</text>
+  <line x1="760" y1="1281" x2="461" y2="1281" stroke="#039855" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="522" y="1272" class="msg">Wrapper extracts result.data</text>
+
+  <circle cx="47" cy="1334" r="15" fill="#039855"/><text x="47" y="1339" text-anchor="middle" class="number">18</text>
+  <line x1="455" y1="1334" x2="163" y2="1334" stroke="#039855" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="207" y="1325" class="msg">Host prints response; loop waits for next ID or q</text>
+
+  <rect x="70" y="1360" width="1360" height="42" rx="8" fill="#FFF7E8" stroke="#FEC84B"/>
+  <text x="90" y="1387" class="note">Three roles: server handles MCP requests; client module translates host method calls into MCP requests; host handles user interaction and displays results.</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title description">
+  <title id="title">Exercise 4 MCP logging notification flow</title>
+  <desc id="description">The host registers a log handler, calls the MCP tool, the server sends ctx.info logging notifications over stdio, the client invokes the handler, and the handler prints the log. The final tool result is returned separately.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#344054"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#175CD3"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Arial, sans-serif; fill: #101828; }
+      .subtitle { font: 15px Arial, sans-serif; fill: #475467; }
+      .box-title { font: 700 17px Arial, sans-serif; fill: #101828; }
+      .body { font: 14px Arial, sans-serif; fill: #344054; }
+      .code { font: 14px Consolas, monospace; fill: #175CD3; }
+      .lane { font: 700 14px Arial, sans-serif; fill: #344054; }
+      .note { font: 14px Arial, sans-serif; fill: #344054; }
+      .arrow-label { font: 13px Arial, sans-serif; fill: #344054; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#F9FAFB"/>
+  <text x="48" y="48" class="title">Exercise 4: MCP log notification flow</text>
+  <text x="48" y="76" class="subtitle">The host registers a callback; the server sends log notifications while the tool is running.</text>
+
+  <rect x="54" y="112" width="1092" height="54" rx="10" fill="#EFF8FF" stroke="#84CAFF"/>
+  <text x="76" y="145" class="lane">Setup in host:</text>
+  <text x="190" y="145" class="code">Client(..., log_handler=show_log)</text>
+  <text x="520" y="145" class="body">registers the function that receives server log notifications</text>
+
+  <rect x="60" y="210" width="210" height="126" rx="12" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="82" y="244" class="box-title">MCP server tool</text>
+  <text x="82" y="274" class="code">batch_check_refunds()</text>
+  <text x="82" y="302" class="body">Processes each order</text>
+
+  <rect x="355" y="210" width="210" height="126" rx="12" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="379" y="244" class="box-title">FastMCP Context</text>
+  <text x="379" y="274" class="code">await ctx.info(...)</text>
+  <text x="379" y="302" class="body">Creates a log notification</text>
+
+  <rect x="650" y="210" width="210" height="126" rx="12" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="676" y="244" class="box-title">MCP over stdio</text>
+  <text x="676" y="274" class="body">Notification travels from</text>
+  <text x="676" y="298" class="body">server process to client</text>
+
+  <rect x="945" y="210" width="210" height="126" rx="12" fill="#FFFFFF" stroke="#98A2B3" stroke-width="2"/>
+  <text x="973" y="244" class="box-title">FastMCP client</text>
+  <text x="973" y="274" class="body">Receives notification</text>
+  <text x="973" y="298" class="body">and calls registered handler</text>
+
+  <line x1="270" y1="274" x2="350" y2="274" stroke="#344054" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="279" y="255" class="arrow-label">tool calls</text>
+
+  <line x1="565" y1="274" x2="645" y2="274" stroke="#175CD3" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="565" y="250" class="arrow-label">log notification</text>
+
+  <line x1="860" y1="274" x2="940" y2="274" stroke="#175CD3" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="863" y="250" class="arrow-label">dispatch</text>
+
+  <rect x="355" y="402" width="300" height="110" rx="12" fill="#ECFDF3" stroke="#75E0A7" stroke-width="2"/>
+  <text x="382" y="438" class="box-title">Host callback</text>
+  <text x="382" y="468" class="code">show_log(notification)</text>
+  <text x="382" y="492" class="body">Formats and prints the message</text>
+
+  <rect x="785" y="402" width="300" height="110" rx="12" fill="#ECFDF3" stroke="#75E0A7" stroke-width="2"/>
+  <text x="813" y="438" class="box-title">Host terminal</text>
+  <text x="813" y="468" class="code">[Server log] ...</text>
+  <text x="813" y="492" class="body">Visible while the tool runs</text>
+
+  <path d="M1050 336 L1050 370 L505 370 L505 397" fill="none" stroke="#175CD3" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="720" y="361" class="arrow-label">log_handler invokes show_log(notification)</text>
+
+  <line x1="655" y1="457" x2="780" y2="457" stroke="#344054" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="670" y="438" class="arrow-label">print()</text>
+
+  <rect x="60" y="565" width="1095" height="82" rx="12" fill="#FFF7E8" stroke="#FEC84B" stroke-width="2"/>
+  <text x="84" y="598" class="box-title">Separate from logs: final tool result</text>
+  <text x="84" y="625" class="body">After processing all orders, the server returns {total, eligible, results}; the host receives it from call_tool() and prints result.data.</text>
+</svg>
